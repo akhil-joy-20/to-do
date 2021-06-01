@@ -1,0 +1,186 @@
+:root{
+    --primary-color: #fff;
+    --secondary-color: #212329;
+    --main-heading-color: rgb(178, 18, 218);
+    --input-bottom-color: rgb(10, 199, 224);
+    --todo-color: orangered;
+    --doing-color: orange;
+    --completed-color: green;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+}
+
+
+.heading{
+    font-family: cursive;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-top: 2%;
+    text-align: center;
+    color: var(--main-heading-color);
+}
+.hr_title{
+    height: 1px;
+    background: var(--main-heading-color);
+    width: 10%;
+}
+
+
+.main_container{
+    background-color: var(--secondary-color);
+    margin: 2% 1%;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.add_task{
+    background-color: var(--primary-color);
+    margin: 0% 10%;
+    border-radius: 10px;
+    padding: 0.2rem;
+}
+.add_task input{
+    outline: none;
+    width: 92%;
+    border: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-left: 3%;
+    border-bottom: 2px solid var(--input-bottom-color);
+}
+.add_task .fas{
+    cursor: pointer;
+    margin-left: 2%;
+    color: rgb(255, 0, 200);
+}
+.add_task .fas:hover{
+    color: blue;
+    transition: all 0.5s;
+}
+.add_task .fas:active{
+    transform: translateY(5px);
+}
+
+.sub_container{
+    margin-top: 5%;
+}
+.list_container{
+    background-color: var(--primary-color);
+    margin-top: 50px; 
+    min-height: 300px;
+    border-radius: 8px;
+    padding-bottom: 2rem;
+}
+
+#todo{
+    box-shadow: 5px 5px var(--todo-color);
+}
+#doing{
+    box-shadow: 5px 5px var(--doing-color);
+}
+#completed{
+    box-shadow: 5px 5px var(--completed-color);
+}
+.tasks{
+    word-wrap: break-word;
+}
+.list_container h3{
+    padding-top: 1%;
+    font-weight: bolder;
+    font-size: 2rem;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    margin-bottom: 3rem;
+}
+#todo h3,#todo h5{
+    color: var(--todo-color)
+}
+#doing h3,#doing h5{
+    color: var(--doing-color);
+}
+#completed h3,#completed h5{
+    color: var(--completed-color);
+}
+#completed h5{
+    text-decoration: line-through var(--secondary-color);
+}
+
+.todomsg{
+    color: rgb(150, 150, 142);
+    text-align: center;
+    margin-top: 40px;
+}
+.todomsghide{
+    display: none;
+}
+
+.tasks{
+    margin-top: 1.5rem;
+    margin-left: 1%;
+}
+.individual_task{
+    display: inline;
+}
+.icons{
+    display: inline;
+    float: right;
+    margin-right: 1%;
+}
+.list_icon{
+    font-size: 0.7rem;
+    color: var(--secondary-color);
+    margin-right: 8px;
+}
+.fa-angle-double-right{
+    color: var(--doing-color);
+    cursor: pointer;
+}
+.fa-trash-alt{
+    color: red;
+    margin-left: 38px;
+    cursor: pointer;
+}
+.fa-check{
+    color: var(--completed-color);
+    cursor: pointer;
+}
+.info{
+    font-size: larger;
+}
+
+
+/* tooltip section */
+.tooltp {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltp .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    font-weight: lighter;
+    font-size: 1rem;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+     width: max-content;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; 
+  }
+
+  .tooltp:hover .tooltiptext {
+    visibility: visible;
+  }
